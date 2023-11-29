@@ -1,0 +1,21 @@
+{
+    "name": "isaadsalman/headless-refresh",
+    "description": "Statamic addon for triggering headless updates.",
+    "type": "statamic-addon",
+    "autoload": {
+        "psr-4": {
+            "Isaadsalman\\HeadlessRefresh\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Headless Refresh",
+            "description": "Statamic addon for triggering headless updates."
+        },
+        "laravel": {
+            "providers": [
+                "Isaadsalman\\HeadlessRefresh\\ServiceProvider"
+            ]
+        }
+    }
+}
