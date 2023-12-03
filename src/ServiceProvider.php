@@ -49,7 +49,7 @@ class ServiceProvider extends AddonServiceProvider
     protected function registerEventListeners()
     {
         // Register event listeners based on configuration
-        if (config('headless-refresh.trigger_option')) {
+        if (config('headless-refresh.event_trigger')) {
             $events = config('headless-refresh.events');
 
             foreach ($events as $event) {

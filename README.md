@@ -22,7 +22,7 @@ The configuration for the Headless Refresh addon is found in `config/statamic/he
 
 ```php
 return [
-    'trigger_option' => env('HEADLESS_REFRESH_TRIGGER_OPTION', false),
+    'event_trigger' => env('HEADLESS_REFRESH_EVENT_TRIGGER', false),
     'trigger_link' => env('HEADLESS_REFRESH_TRIGGER_LINK', null),
     'deployment_message' => env('HEADLESS_REFRESH_DEPLOYMENT_MESSAGE', "Deployed"),
     'events' => [
@@ -40,7 +40,7 @@ return [
 
 ### Configuration Options:
 
-- `trigger_option`: Set to `true` to enable the event-based trigger.
+- `event_trigger`: Set to `true` to enable the event-based trigger.
 - `trigger_link`: Define the URL or link that triggers the headless refresh.
 - `deployment_message`: Customize the message displayed upon successful deployment.
 - `events`: Specify the events that should trigger the headless refresh.
@@ -49,7 +49,7 @@ return [
 
 ### Event-Based Trigger (Optional)
 
-To enable the event-based trigger, set the `trigger_option` to `true` in the configuration file. This will trigger the headless refresh based on specified events.
+To enable the event-based trigger, set the `event_trigger` to `true` in the configuration file. This will trigger the headless refresh based on specified events.
 
 ### Dashboard Widget
 

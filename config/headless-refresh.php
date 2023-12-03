@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'trigger_option' => env('HEADLESS_REFRESH_TRIGGER_OPTION', false),
+    'event_trigger' => env('HEADLESS_REFRESH_EVENT_TRIGGER', false),
     'trigger_link' => env('HEADLESS_REFRESH_TRIGGER_LINK', null),
     'deployment_message' => env('HEADLESS_REFRESH_DEPLOYMENT_MESSAGE', "Deployed"),
     'events' => [
