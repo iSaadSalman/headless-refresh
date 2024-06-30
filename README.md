@@ -1,5 +1,13 @@
 # Headless Refresh - Statamic Addon
 
+The Statamic Headless Refresh addon enhances your Statamic experience by seamlessly integrating headless CMS capabilities. It provides a convenient dashboard widget that allows you to trigger updates to your decoupled website directly from the Statamic backend. The plugin also supports automated URL triggers tied to specific events, such as when an entry is saved, ensuring your headless site is always up-to-date. Events are also customizable.
+
+## Key Features
+1. **Dashboard Widget:** Optionally add a widget to your Statamic dashboard for easy manual refreshes.
+2. **Event-Driven Triggers:** Automate the refresh process by tying URL triggers to events like entry saves.
+
+Effortlessly manage and synchronize your headless CMS updates with Statamic Headless Refresh.
+
 ## Installation
 
 To install the Headless Refresh addon, follow these steps:
