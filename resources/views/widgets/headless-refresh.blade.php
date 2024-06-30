@@ -1,12 +1,13 @@
-<div class="card p-0 content flex justify-between">
-    <div class="py-6 px-8">
-        <h1>Live Updates Notice</h1>
-        <p> Please note that your updates will be visible online within 5 minutes from when you save an entry. If you require  immediate visibility, simply click the button on the right.</p>
+<div class="card p-0 content flex flex-col md:flex-row justify-between">
+    <div class="py-6 px-8 flex items-center">
+        <div>
+            <h1>{{ config('headless-refresh.live_updates_notice_title') }}</h1>
+            <p>{{ config('headless-refresh.live_updates_notice_text') }}</p>
+        </div>
     </div>
-    <div class="items-center p-2 mt-10">
-        <p class="py-3 px-4"> <!-- Modified paragraph to create space for the button -->
-            <button class="btn-primary headless-refresh-btn">Refresh Now</button>
+    <div class="items-center p-2 mt-10 md:mt-0">
+        <p class="py-3 px-4 text-center">
+            <button class="btn-primary headless-refresh-btn">{{ config('headless-refresh.live_updates_notice_button') }}</button>
         </p>
     </div>
 </div>
-

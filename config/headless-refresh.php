@@ -14,4 +14,7 @@ return [
         Statamic\Events\TaxonomySaved::class,
         Statamic\Events\TaxonomyDeleted::class,
     ],
+    'live_updates_notice_title' => __('Live Updates Notice'),
+    'live_updates_notice_text' => __('Please note that your updates will be visible online within 5 minutes from when you save an entry. If you require immediate visibility, simply click the button below.'),
+    'live_updates_notice_button' => __('Refresh Now')
 ];

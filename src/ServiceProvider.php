@@ -27,7 +27,6 @@ class ServiceProvider extends AddonServiceProvider
 
     public function bootAddon()
     {
-        
 
         $this
         ->bootAddonConfig()
@@ -41,6 +40,8 @@ class ServiceProvider extends AddonServiceProvider
         $this->publishes([
             __DIR__.'/../config/headless-refresh.php' => config_path('statamic/headless-refresh.php'),
         ], 'headless-refresh-config');
+
+        Statamic::provideToScript(['headless-refresh' => config('statamic.headless-refresh')]);
 
         return $this;
     }
