@@ -29,11 +29,17 @@ class ServiceProvider extends AddonServiceProvider
     {
 
         $this
-        ->bootAddonConfig()
+        ->bootConfig()
         ->registerEventListeners();
+
+
+        Statamic::afterInstalled(function ($command) {
+            $command->call('vendor:publish', ['--tag' => 'headless-refresh-config', '--force' => true]);
+            $command->call('optimize');
+        });
     }
 
-    protected function bootAddonConfig()
+    protected function bootConfig()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/headless-refresh.php', 'statamic.headless-refresh');
 
@@ -50,8 +56,8 @@ class ServiceProvider extends AddonServiceProvider
     protected function registerEventListeners()
     {
         // Register event listeners based on configuration
-        if (config('headless-refresh.event_trigger')) {
-            $events = config('headless-refresh.events');
+        if (config('statamic.headless-refresh.event_trigger')) {
+            $events = config('statamic.headless-refresh.events');
 
             foreach ($events as $event) {
                 Event::listen($event, UnifiedEventHandler::class);

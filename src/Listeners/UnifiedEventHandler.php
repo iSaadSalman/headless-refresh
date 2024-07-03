@@ -16,8 +16,8 @@ class UnifiedEventHandler
 
     private function triggerUpdateLink()
     {
-        $triggerLink = config('headless-refresh.trigger_link');
-        $deploymentMessage = config('headless-refresh.deployment_message');
+        $triggerLink = config('statamic.headless-refresh.trigger_link');
+        $deploymentMessage = config('statamic.headless-refresh.deployment_message');
 
         if ($triggerLink) {
             // Use try-catch block to handle exceptions

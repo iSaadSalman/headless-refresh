@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 Route::get('headless-refresh/headless-refresh-proxy', function (Request $request) {
-    $triggerLink = config('headless-refresh.trigger_link');
+    $triggerLink = config('statamic.headless-refresh.trigger_link');
 
     try {
         $response = Http::get($triggerLink);
