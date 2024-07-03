@@ -43,6 +43,9 @@ return [
         Statamic\Events\TaxonomySaved::class,
         Statamic\Events\TaxonomyDeleted::class,
     ],
+    'live_updates_notice_title' => 'Live Updates Notice',
+    'live_updates_notice_text' => 'Please note that your updates will be visible online within 5 minutes from when you save an entry. If you require immediate visibility, simply click the button below.',
+    'live_updates_notice_button' => 'Refresh Now'
 ];
 ```
 
@@ -52,6 +55,9 @@ return [
 - `trigger_link`: Define the URL or link that triggers the headless refresh.
 - `deployment_message`: Customize the message displayed upon successful deployment.
 - `events`: Specify the events that should trigger the headless refresh.
+- `live_updates_notice_title`: Widget title
+- `live_updates_notice_text`: Widget description text
+- `live_updates_notice_button`: Widget button text.
 
 ## Usage
 
