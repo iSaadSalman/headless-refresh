@@ -20,6 +20,10 @@ class ServiceProvider extends AddonServiceProvider
         __DIR__.'/../resources/js/headless-refresh.js'
     ];
 
+    protected $stylesheets = [
+        __DIR__.'/../resources/css/headless-refresh.css'
+    ];
+
     protected $routes = [
         'cp' => __DIR__.'/../routes/cp.php',
     ];

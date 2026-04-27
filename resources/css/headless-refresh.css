@@ -1,0 +1,71 @@
+/* Headless Refresh — uses Statamic 6 design tokens with fallbacks
+   so the widget always inherits the user's CP theme.            */
+
+.headless-refresh-card {
+    background-color: var(--ui-bg, var(--ui-card-bg, #ffffff));
+    border-color: var(--ui-border, rgba(0, 0, 0, 0.08)) !important;
+}
+
+.headless-refresh-card__title {
+    color: var(--ui-text, #0f172a);
+}
+
+.headless-refresh-card__text {
+    color: var(--ui-muted-text, var(--ui-text-muted, #64748b));
+}
+
+/* Statamic primary blue (v6 default ~ #1F6FEB / Tailwind blue-600 family) */
+.headless-refresh-btn {
+    background-color: var(--ui-primary-600, #1F6FEB) !important;
+    transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+.headless-refresh-btn:hover {
+    background-color: var(--ui-primary-700, #1858CC) !important;
+}
+.headless-refresh-btn:active {
+    background-color: var(--ui-primary-800, #1448A8) !important;
+}
+.headless-refresh-btn:focus {
+    outline: 2px solid var(--ui-primary-500, #3B82F6);
+    outline-offset: 2px;
+}
+.headless-refresh-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed !important;
+}
+
+/* ----- Dark mode -----
+   Statamic 6 may signal dark mode via .dark on <html>, [data-theme="dark"],
+   or simply follow OS preference. Cover all three. */
+
+@media (prefers-color-scheme: dark) {
+    .headless-refresh-card {
+        background-color: var(--ui-bg, #111827);
+        border-color: var(--ui-border, rgba(255, 255, 255, 0.06)) !important;
+    }
+    .headless-refresh-card__title {
+        color: var(--ui-text, #f1f5f9);
+    }
+    .headless-refresh-card__text {
+        color: var(--ui-muted-text, #94a3b8);
+    }
+}
+
+.dark .headless-refresh-card,
+[data-theme="dark"] .headless-refresh-card,
+html.dark .headless-refresh-card {
+    background-color: var(--ui-bg, #111827);
+    border-color: var(--ui-border, rgba(255, 255, 255, 0.06)) !important;
+}
+
+.dark .headless-refresh-card__title,
+[data-theme="dark"] .headless-refresh-card__title,
+html.dark .headless-refresh-card__title {
+    color: var(--ui-text, #f1f5f9);
+}
+
+.dark .headless-refresh-card__text,
+[data-theme="dark"] .headless-refresh-card__text,
+html.dark .headless-refresh-card__text {
+    color: var(--ui-muted-text, #94a3b8);
+}

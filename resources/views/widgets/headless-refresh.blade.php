@@ -3,27 +3,25 @@
 @endphp
 
 @if ($isV6)
-<div class="bg-white dark:bg-gray-800 rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between">
-    
-    <div class="px-6 py-5">
-        <h1 class="text-lg font-semibold">
+<div class="headless-refresh-card"
+     style="border:1px solid rgba(0,0,0,0.08);border-radius:0.5rem;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;">
+    <div class="headless-refresh-card__body" style="flex:1 1 280px;min-width:0;">
+        <h2 class="headless-refresh-card__title"
+            style="font-size:0.9375rem;font-weight:600;margin:0 0 0.25rem 0;line-height:1.3;">
             {{ config('statamic.headless-refresh.live_updates_notice_title') }}
-        </h1>
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
+        </h2>
+        <p class="headless-refresh-card__text"
+           style="font-size:0.8125rem;line-height:1.5;margin:0;">
             {{ config('statamic.headless-refresh.live_updates_notice_text') }}
         </p>
     </div>
-
-    <div class="px-6 pb-5 md:pb-0 md:pr-6 flex justify-center">
-        <button
-            class="cursor-pointer btn-primary headless-refresh-btn px-8 py-3 text-base font-semibold
-                   transition duration-200 ease-in-out
-                   hover:opacity-90 hover:shadow-lg
-                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+    <div class="headless-refresh-card__action" style="flex-shrink:0;">
+        <button type="button"
+                class="headless-refresh-btn"
+                style="display:inline-flex;align-items:center;justify-content:center;padding:0.5rem 1rem;font-size:0.8125rem;font-weight:600;color:#fff;background-color:var(--ui-primary-600, #1F6FEB);border:0;border-radius:0.375rem;cursor:pointer;white-space:nowrap;">
             {{ config('statamic.headless-refresh.live_updates_notice_button') }}
         </button>
     </div>
-
 </div>
 @else
 
